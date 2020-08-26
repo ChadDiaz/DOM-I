@@ -82,6 +82,8 @@ topContentP[1].textContent = siteContent['main-content']['about-content'];
 const middImg = document.getElementById("middle-img");
 middImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+// BOTTOM CONTENT SECTION 
+
 const bottomContent = document.querySelectorAll('.bottom-content p');
 console.log(bottomContent);
 bottomContent[0].textContent = siteContent['main-content']['services-content'];
@@ -93,6 +95,8 @@ console.log(sectionContent);
 sectionContent[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
 sectionContent[1].textContent = siteContent['contact']['phone'];
 sectionContent[2].textContent = siteContent['contact']['email'];
+
+// FOOTER SECTION 
 
 const footerP = document.querySelector('footer p');
 console.log(footerP);
