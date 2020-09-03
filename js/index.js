@@ -52,9 +52,7 @@ topNavigation[3].textContent=siteContent['nav']['nav-item-4'];
 topNavigation[4].textContent=siteContent['nav']['nav-item-5'];
 topNavigation[5].textContent=siteContent['nav']['nav-item-6'];
 
-topNavigation.forEach((nav) =>{
-  nav.style.color = "purple"
-});
+
 
 
 // CTA SECTION 
@@ -107,7 +105,7 @@ const footerP = document.querySelector('footer p');
 // console.log(footerP);
 footerP.textContent = siteContent['footer']['copyright']
 
-// ADDING ELEMENTS
+// ADDING ELEMENTS SECTION  
 
 const headerEl = document.querySelector('header');
 // console.log(headerEl);
@@ -122,9 +120,25 @@ headerEl.prepend(subHeadline)
 
 
 
-// const contentClassP = document.getElementsByClassName('contact');
-// console.log(contentClassP.innerHTML);
-// const comeSee = document.createElement("p");
-// comeSee.textContent = "We can't wait to see you soon!";
-// comeSee.style.marginTop= "10px";
-// contentClassP.appendChild(comeSee);
+const contentClassP = document.getElementsByClassName('contact')[0];
+console.log(contentClassP);
+const comeSee = document.createElement("p");
+comeSee.textContent = "We can't wait to see you soon!";
+comeSee.style.marginTop= "10px";
+
+
+topNavigation.forEach((nav) =>{
+  nav.style.color = "green"
+});
+
+// STRETCH SECTION  
+
+topContent.forEach ((el)=>{
+  el.style.color = "orange";
+})
+
+topContentP.forEach((el) =>{
+  el.style.color = "blue"
+})
+
+footerP.style.backgroundColor= "coral";
