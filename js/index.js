@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -40,3 +40,105 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAVIGATION SECTION 
+
+const topNavigation = document.querySelectorAll("a");
+// console.log(topNavigation);
+topNavigation[0].textContent=siteContent["nav"]["nav-item-1"];
+topNavigation[1].textContent=siteContent["nav"]["nav-item-2"];
+topNavigation[2].textContent=siteContent["nav"]["nav-item-3"];
+topNavigation[3].textContent=siteContent['nav']['nav-item-4'];
+topNavigation[4].textContent=siteContent['nav']['nav-item-5'];
+topNavigation[5].textContent=siteContent['nav']['nav-item-6'];
+
+
+
+
+// CTA SECTION 
+
+const ctaH1 = document.querySelector("h1");
+ctaH1.innerHTML = "Dom <br> Is <br> Awesome";
+
+const ctaButton = document.querySelector('button')
+ctaButton.textContent=siteContent['cta']['button'];
+
+const ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+// MAIN CONTENT SECTION
+
+const topContent = document.querySelectorAll('h4')
+// console.log(topContent)
+topContent[0].textContent = siteContent['main-content']['features-h4'];
+topContent[1].textContent = siteContent['main-content']['about-h4'];
+topContent[2].textContent = siteContent['main-content']['services-h4'];
+topContent[3].textContent = siteContent['main-content']['product-h4'];
+topContent[4].textContent = siteContent['main-content']['vision-h4'];
+topContent[5].textContent = siteContent['contact']['contact-h4'];
+
+const topContentP = document.querySelectorAll('.top-content p');
+// console.log(topContentP);
+topContentP[0].textContent = siteContent['main-content']['features-content'];
+topContentP[1].textContent = siteContent['main-content']['about-content'];
+
+const middImg = document.getElementById("middle-img");
+middImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// BOTTOM CONTENT SECTION 
+
+const bottomContent = document.querySelectorAll('.bottom-content p');
+// console.log(bottomContent);
+bottomContent[0].textContent = siteContent['main-content']['services-content'];
+bottomContent[1].textContent = siteContent['main-content']['product-content'];
+bottomContent[2].textContent = siteContent['main-content']['vision-content'];
+
+const sectionContent = document.querySelectorAll('.contact p');
+// console.log(sectionContent);
+sectionContent[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
+sectionContent[1].textContent = siteContent['contact']['phone'];
+sectionContent[2].textContent = siteContent['contact']['email'];
+
+// FOOTER SECTION 
+
+const footerP = document.querySelector('footer p');
+// console.log(footerP);
+footerP.textContent = siteContent['footer']['copyright']
+
+// ADDING ELEMENTS SECTION  
+
+const headerEl = document.querySelector('header');
+// console.log(headerEl);
+const subHeadline = document.createElement('h2');
+subHeadline.textContent = "I love learning DOM";
+// console.log(subHeadline);
+subHeadline.style.fontSize = "1.6rem";
+subHeadline.style.marginTop = "10px"
+subHeadline.style.marginRight = '20px'
+subHeadline.style.color = "black";
+headerEl.prepend(subHeadline)
+
+
+
+const contentClassP = document.getElementsByClassName('contact')[0];
+console.log(contentClassP);
+const comeSee = document.createElement("p");
+comeSee.textContent = "We can't wait to see you soon!";
+comeSee.style.marginTop= "10px";
+
+
+topNavigation.forEach((nav) =>{
+  nav.style.color = "green"
+});
+
+// STRETCH SECTION  
+
+topContent.forEach ((el)=>{
+  el.style.color = "orange";
+})
+
+topContentP.forEach((el) =>{
+  el.style.color = "blue"
+})
+
+footerP.style.backgroundColor= "coral";
